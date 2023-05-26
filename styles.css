@@ -4,7 +4,7 @@
 @font-face {
     font-family: "Abel";
     src: local("Abel"),
-      url("http://fonts.googleapis.com/css?family=Abel");
+      url("Abel-Regular.ttf") format("opentype") tech(color-COLRv1);
   }
   
 body { background-color:#fefdfb; color: #555; font-family: 'Abel', sans-serif; font-size: 93%; font-weight:normal;margin: 0; }
