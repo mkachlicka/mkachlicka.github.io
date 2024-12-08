@@ -1,5 +1,6 @@
 ﻿/*@import url(https://fonts.googleapis.com/css?family=Abel); there seem to be a problem with bold for this font, not available? check*/ 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+/*@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css);
   
 body { background-color:#fefdfb; color: #555; font-family: 'Abel', sans-serif; font-size: 93%; font-weight:normal;margin: 0; }
 a:link, a:visited, a:active{ color:inherit; text-decoration: none; }
@@ -56,7 +57,7 @@ ul#topnav li a:hover {
     text-decoration:none;
 }
 
-ul#topnav li> ul {
+/*ul#topnav li> ul {
     list-style-type: none;
     margin:0;
     padding:0;
@@ -68,8 +69,26 @@ ul#topnav li> ul > li{
     float:left;
     display:inline;
     padding-right:5px;
+}*/
+
+ul#topnav li > ul {
+    display: flex; /* Flex container for alignment */
+    flex-wrap: nowrap; /* Prevent wrapping to a new row */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 0px; /* Add space between icons */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-    
+
+ul#topnav li > ul > li {
+    font-size: 120%; /* Keep the font size */
+    float: none; /* Remove float */
+    display: flex; /* Ensure items align as flex items */
+    align-items: center; /* Center icons vertically */
+    padding: 0; /* Remove extra padding */
+}
+
 #container {
     width:100%;
     margin-top:48px;
@@ -178,7 +197,14 @@ ul#topnav li a { display: block; padding-right:0%; padding-bottom:5px; text-deco
 ul#topnav li a:hover {text-decoration:underline;}
 
 
-ul#topnav li> ul { display:table; float:none; table-layout:fixed; margin:0 auto;}
+/*ul#topnav li> ul { display:table; float:none; table-layout:fixed; margin:0 auto;}*/
+
+ul#topnav li > ul {
+    display: flex; /* Keep icons in flexbox layout */
+    flex-wrap: nowrap; /* Ensure icons remain in a single row */
+    gap: 0px; /* Reduce spacing for smaller screens */
+}
+
 ul#topnav li> ul > li {padding-left:10px; }
 
 /* other items */
