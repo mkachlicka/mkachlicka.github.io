@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93DR37RSFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-93DR37RSFK');
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Magdalena Kachlicka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="open source html and css template">
+<meta name="author" content="mlp design">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="slidy.css">
+
+<style>
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .search-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-filter input, .search-filter select {
+      padding: 0.5rem;
+      min-width: 200px;
+      font-size: 1rem;
+    }
+    .tutorial-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .tutorial-card {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .tutorial-card h3 {
+      margin-top: 0;
+    }
+    .tutorial-card a {
+      color: #228b22;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tutorial-card a:hover {
+      text-decoration: underline;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+<div id="menu">
+<nav>
+<input type="checkbox" id="show-menu" role="button">
+<label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
+<label for="show-menu" class="close"><span class="fa fa-times"></span></label>
+<ul id="topnav">  
+<li><a href="index.html">Home</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li>
+	<ul> 
+	<li><a href="https://github.com/mkachlicka"><i class="fa-brands fa-github"></i></a></li>
+	<li><a href="https://scholar.google.com/citations?user=RaK9uLgAAAAJ&hl=en"><i class="fa-brands fa-google"></i></a></li>
+	<li><a href="https://www.linkedin.com/in/mkachlicka/"><i class="fa-brands fa-linkedin"></i></a></li>
+	<li><a href="https://twitter.com/mkachlicka"><i class="fa-brands fa-twitter"></i></a></li>
+	<li><a href="https://bsky.app/profile/mkachlicka.bsky.social"><i class="fa-brands fa-bluesky"></i></a></li>
+	</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div id="container">
+<div id="pageheader">
+<h1>Resources</h1>
+
+</div>
+
+<div class="section">
+<div class="pageitem">
+<div id="slider">
+<figure>
+	<img src="images/22.png" alt>
+	<img src="images/20.png" alt>
+	<img src="images/19.png" alt>
+	<img src="images/22.png" alt> <!-- note 1st image is also the last -->
+</figure>
+</div>
+</div>
+</div>
+
+<div class="section">
+
+    <h1>Tutorials</h1>
+    <p>Explore tutorials covering EEG preprocessing, speech/audio analysis, and Python-based data workflows.</p>
+
+<main class="container">
+
+
+    <div class="search-filter">
+      <input type="text" id="tutorialSearch" placeholder="Search tutorials...">
+      <select id="categorySelect">
+        <option value="">All Categories</option>
+        <option value="EEG">EEG</option>
+        <option value="Audio">Audio</option>
+        <option value="Linguistics">Linguistics</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+
+
+     <!--
+    <div class="tutorial-list" id="tutorialList">
+      <div class="tutorial-card" data-category="EEG">
+        <h3>EEG Preprocessing with MNE</h3>
+        <p>A walkthrough of EEG filtering, epoching, and visualization using MNE-Python.</p>
+        <a href="tutorials/mne-preprocessing.html">View Tutorial →</a>
+      </div>
+
+      <div class="tutorial-card" data-category="Audio">
+        <h3>Mel-Spectrograms with Librosa</h3>
+        <p>Convert raw audio into time-frequency features using Python’s Librosa package.</p>
+        <a href="tutorials/librosa-mels.html">View Tutorial →</a>
+      </div>
+
+      <div class="tutorial-card" data-category="Linguistics">
+        <h3>Phoneme Alignment with TextGrid</h3>
+        <p>Use Praat & Python to align phonetic segments and visualize speech structure.</p>
+        <a href="tutorials/phoneme-alignment.html">View Tutorial →</a>
+      </div>
+
+      <div class="tutorial-card" data-category="Python">
+        <h3>Managing Experimental Data with Pandas</h3>
+        <p>Tips for organizing, merging, and exporting behavioral data using pandas.</p>
+        <a href="tutorials/pandas-data.html">View Tutorial →</a>
+      </div>
+-->
+      <div class="tutorial-list" id="tutorialList">
+      <div class="tutorial-card" data-category="EEG">
+        <h3>MMN analysis with ERPLab</h3>
+        <p>A walkthrough of EEG preprocessing and MMN analysis using ERPLab.</p>
+        <a href="tutorials/mmn_analysis_with_erplab.html">View Tutorial →</a>
+      </div>
+
+      <div class="tutorial-card" data-category="Linguistics">
+        <h3>Speech morphing with STRAIGHT</h3>
+        <p>A tutorial on how to morph speech samples using STRAIGHT toolbox.</p>
+        <a href="tutorials/speech_morphing_with_straight.html">View Tutorial →</a>
+      </div>
+
+      <div class="tutorial-card" data-category="Linguistics">
+        <h3>Speech transcriptions with OpenAI Whisper model</h3>
+        <p>A tutorial on how to use OpenAI Whisper model to transcribe audio files.</p>
+        <a href="tutorials/transcriptions_with_whisper.html">View Tutorial →</a>
+      </div>
+
+      <!-- Add more tutorials here -->
+    </div>
+  </main>
+
+
+
+</div>
+<div class="section">
+<div id="credits">
+    <div class="col"><p>Last modified 2025/06/25</p></div>
+    <!-- <div class="col"><p><a href="#">Privacy</a> | <a href="#">Support</a> | <a href="#">Site Map</a></p></div> -->
+
+	<!-- This part has to be kept intact under the CC-NC Licence -->
+    <div class="col"><p><a href="http://mlpdesign.net">HTML & CSS</a> by MLPdesign & MKachlicka</p></div>
+	<!-- CC-NC Licence credit ends here -->
+
+</div>
+</div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const categorySelect = document.getElementById('categorySelect');
+    const searchInput = document.getElementById('tutorialSearch');
+    const tutorialCards = document.querySelectorAll('.tutorial-card');
+
+    function filterTutorials() {
+      const selectedCategory = categorySelect.value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase();
+
+      tutorialCards.forEach(card => {
+        const category = card.getAttribute('data-category').toLowerCase();
+        const content = card.textContent.toLowerCase();
+
+        const matchesCategory = selectedCategory === '' || category === selectedCategory;
+        const matchesSearch = content.includes(searchTerm);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    categorySelect.addEventListener('change', filterTutorials);
+    searchInput.addEventListener('input', filterTutorials);
+  });
+</script>
+
+
+
+</body>
+</html>

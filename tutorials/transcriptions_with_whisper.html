@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93DR37RSFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-93DR37RSFK');
+</script>
+
+<!-- ############### STYLING ############### -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Magdalena Kachlicka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="open source html and css template">
+<meta name="author" content="mlp design">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../slidy.css">
+
+<style>
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+  /*font-family: "Roboto", "Helvetica Neue", sans-serif;*/
+  line-height: 1.6;
+  /*color: #333; */
+  /*background-color: #fff;*/
+}
+
+/*    header, footer {
+      padding: 1rem 2rem;
+      background: #f5f5f5;
+    }
+   nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav a.active {
+      border-bottom: 2px solid #007acc;
+    }*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      align-items: start; /* Important! */
+    }
+
+    article {
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+article a {
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+ /*       article h1 {
+      font-size: 2rem;
+      margin-top: 0;
+    }*/
+
+    article h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+
+
+
+
+pre {
+      background: #f8f8f8;
+      border-left: 3px solid #007acc;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+code {
+  background-color: #f8f8f8;
+  padding: 0.2em 0.4em;
+  font-family: monospace;
+  font-size: 0.95em;
+  border-radius: 4px;
+ color: #800080; 
+}
+
+.toc {
+  position: sticky;
+  top: 6rem; /* Give space under the header */
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background: #fff;
+  padding: 1rem;
+  border-left: 2px solid #eee;
+}
+
+    .toc h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      /*color: #007acc;*/
+    }
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #444;
+      display: block;
+      padding: 0.2rem 0;
+    }
+    .toc a:hover {
+      color: #228b22;
+    /*  color: #800080;*/
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      .toc {
+        position: relative;
+        border-left: none;
+        border-top: 1px solid #eee;
+        margin-top: 2rem;
+      }
+    }
+
+/*Forcing the top nav to be roughly the same thickness*/
+#menu nav a{
+  line-height: 1.1 !important;
+}
+
+/*Copy button*/
+.code-block {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 0.3em 0.6em;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}
+
+
+.pubdate-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid #ccc;
+  padding-left: 0.5rem;
+  opacity: 0.7;
+}
+
+
+</style>
+</head>
+
+<!-- ############### HEADER ############### -->
+
+<body>
+<div id="menu">
+<nav>
+<input type="checkbox" id="show-menu" role="button">
+<label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
+<label for="show-menu" class="close"><span class="fa fa-times"></span></label>
+<ul id="topnav">  
+<li><a href="../index.html">Home</a></li>
+<li><a href="../research.html">Research</a></li>
+<li><a href="../teaching.html">Teaching</a></li>
+<li><a href="../resources.html">Resources</a></li>
+<li><a href="../cv.html">CV</a></li>
+<li><a href="../contact.html">Contact</a></li>
+<li>
+	<ul> 
+	<li><a href="https://github.com/mkachlicka"><i class="fa-brands fa-github"></i></a></li>
+	<li><a href="https://scholar.google.com/citations?user=RaK9uLgAAAAJ&hl=en"><i class="fa-brands fa-google"></i></a></li>
+	<li><a href="https://www.linkedin.com/in/mkachlicka/"><i class="fa-brands fa-linkedin"></i></a></li>
+	<li><a href="https://twitter.com/mkachlicka"><i class="fa-brands fa-twitter"></i></a></li>
+	<li><a href="https://bsky.app/profile/mkachlicka.bsky.social"><i class="fa-brands fa-bluesky"></i></a></li>
+	</ul>
+</li>
+</ul>
+</nav>
+</div>
+
+<!-- ############### MAIN BODY ############### -->
+
+<div id="container">
+<div id="pageheader">
+<h1>Speech transcriptions with OpenAI Whisper model</h1>
+</div>
+
+<div class="section">
+
+  <main>
+    <article>
+
+      <p>In this tutorial, I will show you how to use the OpenAI Whisper model to transcribe your audio files. Big thanks to Rainy Dong who showed me how to do this! &hearts;</p>
+
+      <h2 id="about">About OpenAI Whisper model</h2>
+      <p>Whisper is an automatic speech recognition (ASR) model trained on hundreds of hours of multilingual and multitask supervised data collected from the internet. You can find more information about it on the <a href="https://openai.com/index/whisper/">OpenAI Whisper website</a>.</p>
+
+
+      <h2 id="s01">Using Google Colab to run your code</h2>
+      <p>To run the code in Google Colab, you simply click on the arrow in the left most corner of the code chunk. Depending on what the code is doing, it might take a few seconds (minutes or hours!) for the code to run. Once executed, the arrow will turn into a number (numbers correspond to the order in which you pressed them), and you will see the time that it took to execute it next to it.</p>
+
+      <p>Things to remember when using Colab:</p>
+      <ul>
+        <li>Please do not run multiple chunks at the same time, because things get stuck.</li>
+        <li>Most code chunks have some outputs, always check that these are as expected.</li>
+        <li>Warnings are usually fine, but please read them to make sure you're not missing anything (e.g., deprecated functions).</li>
+      </ul>
+
+      <h3 id="s02">Mounting Google Drive</h3>
+      <p>To analyze files from your Google Drive, you have to let the script know where your data is located. Execute the chunk below. A pop-up window will open; follow the instructions there to grant Colab access to your files in Google Drive.</p>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+# Mount Google Drive
+from google.colab import drive
+drive.mount('/content/drive') # say where your drive is
+</code></pre></div>
+
+
+      <h3 id="s03">Reading audio files</h3>
+      <p>Once you've done that, indicate which folder on Google Drive contains the WAV files you wish to transcribe. You can name your folder however you like, but please do not use spaces.</p>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+import os
+# Change this below to path to the folder containing your audio files
+wav_folder = "/content/drive/MyDrive/speechcues/data/"
+os.chdir(wav_folder)
+</code></pre></div>
+
+      <p>Now, let's check if your files are read correctly. Execute the chunk below. In the output, you should see a list of files that are currently in your data folder you indicated above.</p>
+      <ul>
+        <li>You can change the format of your files from mp3 to wav if needed</li>
+        <li>If you add new files to a previously mounted drive, you might need to re-read the files</li>
+        <li>If you add new files in new folder location you need to re-mount the drive, otherwise the script won't see it</li>
+      </ul>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+# Get audio files
+wav_files = [f for f in os.listdir(wav_folder) if f.endswith('.mp3')]
+
+# Check if all files loaded correctly ()
+print(wav_files)
+len(wav_files)
+</code></pre></div>
+
+
+      <h2 id="s04">Transcribing audio files</h2>
+      <p>Once you set up everything correcly, running the model is super easy. </p>
+
+      <h3 id="s05">Loading the model</h3>
+
+      <p>Run the code below to import the models into your Colab workspace. This will produce a lot of output - this is good. Most messages should be saying something like installing, collecting, or successully installed/uninstalled. This might take a few good seconds/minutes to finish because the models are huge.</p>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+# Import model
+!pip install git+https://github.com/openai/whisper.git
+!sudo apt update && sudo apt install ffmpeg
+</code></pre></div>
+
+      <p>You can use the command below to check if the model was loaded successfully. If models are loaded correctly, this should return usage notes for all available functions.</p>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+# Print model help
+!whisper -h
+</code></pre></div>
+
+      <h3 id="s06">Running the model</h3>
+      <p>The code below uses the OpenAI model to generate trascriptions with the default settings for large English model and returns transcriptions in .txt format. This will take a long time to run (especially if you are not connected to Collab runtime - which I don't recommend doing unless you have a really powerful machine), so please be patient and do not close your browser.</p>
+
+      <ul>
+        <li>If you are running this using your CPU, it will take forever (depending on your equipment, even several hours!)</li>
+        <li>If you are running this using Collab GPU, it will be 100 times faster and also, it doesn't drain your computer's resources so you can do other things in the meantime</li>
+      </ul>
+
+      <div class="code-block">
+        <button class="copy-button">Copy</button>
+        <pre><code class="language-python">
+# Transcribe all audio files in folder
+for wav_file in wav_files: 
+  !whisper "{wav_file}" --model large --language en --output_format txt
+</code></pre></div>
+
+      <p>That's it! You can easily change all the settings you wish (e.g., size of the model, language, values of various parameters, fiele output format) by including appropriate flags in your code.</p>
+
+      <p>After you run this, your transcribed files in specified format will appear in your folder as soon as the transcription is ready.</p>
+
+      <h2 id="faq">FAQ</h2>
+      <p><em><b>Which model to choose?</b></em><p>
+        <p>It depends on your application and amount of data. Smaller models are much faster, but usually much less accurate. Larger models would provide better accuracy, but require more computational power and are slower.</p>
+
+</br><p class="pubdate-note">First published on: June 26, 2025</p></br>
+
+    </article>
+
+<!-- ############### CONTENTS ############### -->
+
+    <aside class="toc">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#about">About OpenAI Whisper model</a></li>
+        <li><a href="#s01">Using Google Colab to run your code</a></li>
+        <li><a href="#s02">Mounting Google Drive</a></li>
+        <li><a href="#s03">Reading audio files</a></li>
+        <li><a href="#s04">Transcribing audio files</a></li>
+        <li><a href="#s05">Loading the model</a></li>
+        <li><a href="#s06">Running the model</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+  </main>
+
+
+</div>
+</div>
+
+<!-- ############### FOOTER ############### -->
+
+<div class="section">
+<div id="credits">
+    <div class="col"><p>Last modified 2025/06/26</p></div>
+    <!-- <div class="col"><p><a href="#">Privacy</a> | <a href="#">Support</a> | <a href="#">Site Map</a></p></div> -->
+
+	<!-- This part has to be kept intact under the CC-NC Licence -->
+    <div class="col"><p><a href="http://mlpdesign.net">HTML & CSS</a> by MLPdesign & MKachlicka</p></div>
+	<!-- CC-NC Licence credit ends here -->
+
+</div>
+</div>
+
+</div>
+
+<!-- ############### JS ELEMENTS ############### -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const categorySelect = document.getElementById('categorySelect');
+    const searchInput = document.getElementById('tutorialSearch');
+    const tutorialCards = document.querySelectorAll('.tutorial-card');
+
+    function filterTutorials() {
+      const selectedCategory = categorySelect.value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase();
+
+      tutorialCards.forEach(card => {
+        const category = card.getAttribute('data-category').toLowerCase();
+        const content = card.textContent.toLowerCase();
+
+        const matchesCategory = selectedCategory === '' || category === selectedCategory;
+        const matchesSearch = content.includes(searchTerm);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    categorySelect.addEventListener('change', filterTutorials);
+    searchInput.addEventListener('input', filterTutorials);
+  });
+
+document.querySelectorAll('.copy-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const code = button.nextElementSibling.querySelector('code');
+    if (!code) return;
+
+    const text = code.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy', 2000);
+    });
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

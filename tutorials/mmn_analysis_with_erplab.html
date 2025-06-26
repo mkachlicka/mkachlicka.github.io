@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93DR37RSFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-93DR37RSFK');
+</script>
+
+<!-- ############### STYLING ############### -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Magdalena Kachlicka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="open source html and css template">
+<meta name="author" content="mlp design">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../slidy.css">
+
+<style>
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+
+
+body {
+  margin: 0;
+  /*font-family: "Roboto", "Helvetica Neue", sans-serif;*/
+  line-height: 1.6;
+  /*color: #333; */
+  /*background-color: #fff;*/
+}
+
+/*    header, footer {
+      padding: 1rem 2rem;
+      background: #f5f5f5;
+    }*/
+ /*   nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav a.active {
+      border-bottom: 2px solid #007acc;
+    }*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pubdate-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid #ccc;
+  padding-left: 0.5rem;
+  opacity: 0.7;
+}
+
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      align-items: start; /* Important! */
+    }
+
+    article {
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+article a {
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+ /*       article h1 {
+      font-size: 2rem;
+      margin-top: 0;
+    }*/
+
+    article h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    pre {
+      background: #f8f8f8;
+      border-left: 3px solid #007acc;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+code {
+  background-color: #f8f8f8;
+  padding: 0.2em 0.4em;
+  font-family: monospace;
+  font-size: 0.95em;
+  border-radius: 4px;
+ color: #800080; 
+}
+
+.toc {
+  position: sticky;
+  top: 6rem; /* Give space under the header */
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background: #fff;
+  padding: 1rem;
+  border-left: 2px solid #eee;
+}
+
+    .toc h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      /*color: #007acc;*/
+    }
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #444;
+      display: block;
+      padding: 0.2rem 0;
+    }
+    .toc a:hover {
+      color: #228b22;
+    /*  color: #800080;*/
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      .toc {
+        position: relative;
+        border-left: none;
+        border-top: 1px solid #eee;
+        margin-top: 2rem;
+      }
+    }
+
+/*Forcing the top nav to be roughly the same thickness*/
+#menu nav a{
+  line-height: 1.1 !important;
+}
+
+
+/* For debugging weird behaviour of top nav
+nav {
+  outline: 2px solid red !important;
+}
+nav * {
+  outline: 1px dashed blue !important;
+}*/
+
+
+  </style>
+</head>
+
+<!-- ############### HEADER ############### -->
+
+<body>
+<div id="menu">
+<nav>
+<input type="checkbox" id="show-menu" role="button">
+<label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
+<label for="show-menu" class="close"><span class="fa fa-times"></span></label>
+<ul id="topnav">  
+<li><a href="../index.html">Home</a></li>
+<li><a href="../research.html">Research</a></li>
+<li><a href="../teaching.html">Teaching</a></li>
+<li><a href="../resources.html">Resources</a></li>
+<li><a href="../cv.html">CV</a></li>
+<li><a href="../contact.html">Contact</a></li>
+<li>
+	<ul> 
+	<li><a href="https://github.com/mkachlicka"><i class="fa-brands fa-github"></i></a></li>
+	<li><a href="https://scholar.google.com/citations?user=RaK9uLgAAAAJ&hl=en"><i class="fa-brands fa-google"></i></a></li>
+	<li><a href="https://www.linkedin.com/in/mkachlicka/"><i class="fa-brands fa-linkedin"></i></a></li>
+	<li><a href="https://twitter.com/mkachlicka"><i class="fa-brands fa-twitter"></i></a></li>
+	<li><a href="https://bsky.app/profile/mkachlicka.bsky.social"><i class="fa-brands fa-bluesky"></i></a></li>
+	</ul>
+</li>
+</ul>
+</nav>
+</div>
+
+<!-- ############### MAIN BODY ############### -->
+
+<div id="container">
+<div id="pageheader">
+<h1>MMN analysis with ERPlab</h1>
+</div>
+
+<div class="section">
+
+  <main>
+    <article>
+      <p>In this tutorial, I will show you how to download the data from <a href="https://erpinfo.org/erp-core" target="_blank">the ERP Core website </a> and how to process that data using EEGlab ad ERPlab packages for MATLAB. This website contains all the information about the experiment, link to the paper and link to the data.</p>
+
+
+      <h2 id="about">About ERP Core website</h2>
+      <p>The ERP CORE is an online resource with optimized paradigms, experiment control scripts, example data from 40 participants, data processing pipelines and analysis scripts, and a broad set of results for 7 different ERP components obtained from 6 different ERP paradigms:</p>
+      <ul>
+        <li>N170 (Face Perception Paradigm)</li>
+        <li>MMN (Passive Auditory Oddball Paradigm)</li>
+        <li>N2pc (Simple Visual Search Paradigm)</li>
+        <li>N400 (Word Pair Judgement Paradigm)</li>
+        <li>P3b (Active Visual Oddball Paradigm)</li>
+        <li>LRP and ERN (Flankers Paradigm)</li>
+      </ul>
+
+      <p>The experiment control scripts, data, and data analysis scripts can be downloaded <a href="https://doi.org/10.18115/D5JW4R" target="_blank">here.</a></p>
+
+      <h2 id="software">MATLAB, EEGlab and ERPlab</h2>
+      <p>MATLAB which is the programming language that is widely used for analysing neuroimaging data. <a href="https://sccn.ucsd.edu/eeglab/" target="_blank">EEGlab</a> and <a href="https://erpinfo.org/erplab" target="_blank">ERPlab</a> are additional packages that require MATLAB to run. While MATLAB is a commercial software solution that require a license to use, both packages are available to download for free.</p>
+
+      <h2 id="data">Downloading and viewing the data</h2>
+      <p>On the ERP Core website you can find different components they analysed (see above), but for our demo, we will look at the MMN (mismatch negativity). So, we click on <code>MMN All data and Scripts</code> and download it (download as zip). This is going to take a while because it’s a big file.</p>
+
+      <p>Let's have a look at these files in more detail to check what they are:</p>
+      <ul>
+        <li>First, have a look at the <code>README</code> document which contains all the information about what this folder contains, how to contact the researchers, and info about their analysis pipeline.</li>
+        <li>In the <code>MMN</code> folder there is an individual folder for each subject. Down there is a subfolder called <code>EEG_ERP_Processing</code> where you will find some useful scripts that you can use for data processing and analysis.</li>
+        <li>Have a look at one of them. With EEGlab and ERPlab (and some other software too) there are usually two ways of doing your processing and analysis. (1) You can do it entirely through custom code as they did it there or (2) you can use GUI to do that (i.e., click buttons) – which is what we are going to do now. These scripts represent the same steps as the ones we will cover in this titorial.</li>
+      </ul>
+
+      <p>Once we downloaded and previewed our data, we can begin processing our data with EEGlab. First, we need to open MATLAB. Then, open EEGlab by typing <code>eeglab</code> in the command window. Some warnings show up but you can ignore them for now.</p>
+
+      <p>Let’s have a look at the data. To do that, click on <code>File > Load existing dataset</code> and for this demo let’s select <code>Subject 1</code> from the MMN dataset – select file called <code>1_MMN.set</code>.
+
+      <p>Once we loaded the dataset we can see some information about it:</p>
+      <ul>
+        <li>Number of channels – here 33. There are 30 active electrodes and 3 channels for recording ocular artefacts</li>
+        <li>Sample rate – the number of samples taken per second of the EEG recording</li>
+      </ul>
+
+      <p>To look at our data go to <code>Plot > Channel data (scroll)</code>. Change some settings by going to <code>Display > Remove DC offset</code>. Now you can see our raw EEG data with each channel plotted separately as a single row with channel name on the y-axis and time on x-axis.</p>
+
+
+      <h2 id="s01">1. Defining channel locations</h2>
+      <p>First, we must define channel locations. This lets the EEGlab know which channels correspond to which locations on the scalp. This step is relevant because there are different electrode setups, so you always need to check that your dataset is annotated correctly.</p>
+
+      <p>To do this, go to <code>Edit > Channel locations</code>. Confirm by clicking <code>OK</code>. This will open a new window, where you can preview the different channels (e.g., FP1, FC3) and where they are located on the scalp (i.e., their coordinates). If that looks correct, confirm by clicking <code>OK</code>.</p>
+
+
+      <h2 id="s02">2. Down-sampling</h2>
+      <p>Next, we're going to down-sample our data. This will reduce the size of our data and speed up the processing. To do this, go to <code>Tools > Change sampling rate</code>. We can enter the sampling rate we want. Let's put <code>256</code> and click <code>OK</code>.</p>
+
+      <p>Now, the EEGlab will give us an option to rename the processed dataset so we can save it it the EEGlab and return to it later if we need to. Once we save it, when you click on <code>Datasets</code>, you can see the original dataset and resampled dataset we just created. This is also reflected in the main blue window with dataset description (see sampling rate and name of the current dataset).</p>
+
+
+      <h2 id="s03">3. Re-referencing</h2>
+      <p>Now, we will re-reference our data. Typically, researchers use earlobe or mastoid electrodes as references, but some other options are also available (e.g., average of all electrodes). Your references location will depend on your experimental design. Here, they used channels <code>P9</code> and <code>P10</code> which are just adjacent to the mastoids.</p>
+
+      <p>To re-reference the data, go to <code>Tools > Re-reference the data</code> and tick the option called <code>Re-reference data to channel(s):</code>. Then, click on the <code>...</code>, select <code>P9</code> and <code>P10</code> from the dropdown menu, and then click <code>OK</code>. The selected reference electrodes should now be displayed in the tab window. To confirm, click OK. Then, you can save the re-referenced dataset. To do that, change the name of the dataset to <code>1_MMN_rereferenced</code> and click <code>OK</code>.</p>
+
+
+      <h2 id="s04">4. Defining additional channels</h2>
+      <p>The next step is to create new EEG channels that are going to help us to remove eyeblinks and eye movements from the data. Whether you would need to perform this step depends on your experimental setup. Here, additional electrodes were placed above and next to the right eye, so we can do that. To define new channels, go to <code>ERPLAB > EEG channel operations</code>.</p>
+
+      <p>We can find horizontal eye movements by taking the difference between the electrode placed outside the left eye and the right eye (i.e., channels 29 and 30). For eye blinks, we can subtract the electrode just above the eye (i.e., electrode F2, channel 15) and channel 31 just below the right eye.</p>
+
+      <p>Use the following formulas to get these additional channels:
+        <ul>
+          <li><code>ch32 = ch29 - ch30 Label (uncorrected) HEOG</code></li>
+          <li><code>ch33 = ch15 - ch31 Label (uncorrected) VEOG</code></li>
+        </ul></p>
+      <p>To confirm, click <code>RUN</code>. Then, save the dataset with additional channels as <code>1_MMN_rereferenced_chop</code>.</p>
+
+
+      <h2 id="s05">5. Filtering: High-pass filter</h2>
+      <p>Next, we’re going to filter our dataset to remove unwanted noise. For now, we going to apply the high-pass filter. Go to <code>ERPLAB > Filter & Frequency Tools > Filters for EEG data</code>. This will open a new window with filters, which gives us a lot of options on how we can define our filters.</p>
+
+      <p>Click the <code>High-pass</code> button to start defining filter settings. Set the frequency to <code>0.1 Hz</code>. You can then change the steepness of the filter by changing the roll-off. To explore, click to change it and see what happens. For high-pass filter, we want <code>12 db per octave</code> roll-off. 
+      <p>When happy with your filter, click <code>APPLY</code>. Save the filtered data as <code>1_MMN_filtered</code>.</p>
+
+
+      <h2 id="s06">6. Removing eye movements with ICA</h2>
+      <p>Next, we will run independent component analysis (ICA) to remove eye blinks and eye movements. Go to <code>Tools > Decompose data with ICA</code>, and select the desired algorithm. We’re going to use the <code>runica</code> a default algorithm, but other more fancy options are also available.</p>
+      <p>Click on <code>Channels</code> to select on which channels we want to run our ICA on. Here, we select all channels except got the <code>(uncorrected) HEOG</code> and <code>(uncorrected) VEOG</code> and click <code>OK</code>. Then, click <code>OK</code> again. ICA takes a good few minutes, so take a break and come back when processing is ready.</p>
+
+
+      <h2 id="s07">7. Plotting component activations</h2>
+      <p>Once the ICA finished, we can have a look at which components relate to eye blinks and eye movements.</p>
+
+      <p>To plot individual components, go to <code>Plot > Component activations (scroll)</code>. Change the scale of your data from 9.934 to 30 (tab next to +/-) and select <code>Reject</code> button.</p>
+      <p>This plot looks similar to the one we’ve seen before, but here, instead of each channel on y-axis we see each component.</p>
+
+      <p>It looks like <code>Component 1</code> corresponds to eye blinks, because we can clearly see very distinct peaks in the data. <code>Component 8</code> might represent our horizontal eye movements, because it presents with a square wave form in the data. When satisfied with your choice, close the plot.</p>
+
+
+      <h2 id="s08">8. Rejecting selected components</h2>
+      <p>Now we will reject those components. To do this, go to <code>Tools > Inspect/label components by map</code>. Select <code>1:10</code> to see topoplots. Click on <code>1</code> as this is the component we identified as our eyeblink. To reject this component, change <code>ACCEPT</code> to <code>REJECT</code>. The same for eye movement component.</p>
+      <p>Now go to <code>Tools > Remove components from data</code>. Because we already flagged our components for rejection, eeglab knows we want to remove them, so we click <code>YES</code>.</p>
+
+      <p><b style="color: red;">Note:</b> Before you click, you can plot the data.</p>
+
+      <p>After removing the components, our uncorrected data will be displayed in blue, and corrected data in red. It looks like eye blinks and eye movements were successfully removed. Scroll through data a bit to make sure it worked. Then, click <code>Accept</code> and save data as <code>1_MMN_filtered pruned with ICA</code>.</p>
+
+
+      <h2 id="s09">9. Epoching</h2>
+      <p>Now, we are ready to epoch our data. This step divides our continuous data into discrete epochs corresponding to the events that are time locked to the relevant events in our stimuli presentation.</p>
+
+      <p>First create event list. Go to <code>ERPLAB > EventList > Upload EventList from txt file</code>. Assign bins and conditions from our experiment. This is given to us in a txt file called <code>BDF_MMN.txt</code> in the folder <code>EEG_ERP_Processing</code>. When we open this file, we can see that Bin 1 corresponds to our deviant events and this is labelled by the number 70. Bin 2 corresponds to our standard events and is marked by the number 80.</p>
+
+      <p>Go to <code>ERPLAB > Assign bins</code> and select that file and then click <code>RUN</code> and <code>OK</code>.</p>
+
+      <p>To epoch our data, go to <code>ERPLAB > Extract bin-based epochs</code>. New window shows up asking us at which times we want to epoch our data. For this experiment, we will set the timings from -200 ms before stimulus onset to 800 ms after stimulus.</p>
+
+      <p>We also apply baseline correction by taking the mean of pre-stimulus interval -200 ms to 0 ms as our baseline. Select <code>Pre</code> and click <code>RUN</code>.</p>
+
+
+      <h2 id="s10">10. Removing remaining artefacts</h2>
+      <p>Now, we need to remove any remaining artefacts from our data. Go to <code>ERPLAB > Artefact detection in epoched data > Simple voltage threshold</code>. This gives you a lot of different options on what you can do but here we just go with simple voltage threshold.</p>
+
+      <p>New window opens. Set voltage limits on the right to -100 100. Select channels 1:28. That just means that we will reject trials above or below that threshold (mV) for selected channels. Then click <code>ACCEPT</code>.</p>
+
+      <p>Plot and new window to save shows up. But before we do that, let’s check our command window. Here you can see for each bin the proportion of accepted and rejected channels and you notice that the number of trials we rejected is quite high. This possibly means that there are some bad channels in our data. So let’s close the plot and cancel save.</p>
+
+      <h3 id="s11">Dealing with bad channels</h3>
+      <p>For this subject there are actually 3 bad channels (noisy!). To fix that, we can go to <code>Tools > Interpolate electrodes</code>. New window shows up. Here we can select our channels by clicking <code>"Select from data channels”</code>. Choose the following channels: C5, F4, and F8. Now we can try artefact rejection again.</p>
+
+      <p><b style="color: red;">Note:</b> Here, I told you which channels are bad. In real life, you have to figure this out yourself by either scrolling through the data (!) or relying on notes you made during testing.</p>
+
+      <h2 id="s11">11. Filtering: Low-pass filter</h2>
+      <p>We apply low-pass filter to remove high-frequency noise from our data. Go to <code>ERPLAB > Filter & Frequency Tools > Filters for EEG data</code> and we set low-pass at 20 Hz and roll-off of 48 db per octave.</p>
+
+      <h2 id="s12">12. Computing average ERPs</h2>
+      <p>To compute ERPs go to <code>ERPLAB > Compute averaged ERPs</code> click <code>RUN</code>. You will be prompted to save new dataset, name it and save it. To plot ERP, go to <code>ERPLAB > Plot ERP waveforms</code>. Select channel 20 – FCz. </p>
+
+      <h3 id="s12">Computing MMN difference wave</h3>
+      <p>To compute the difference wave go to <code>ERPLAB > ERP Operations > ERP Bin Operations</code>, and type <code>b3 = b1 - b2</code>. That is a new bin that reflects the difference between the deviant and the standard tones. Now, you can plot with <code>ERPLAB > Plot ERP waveform</code> by selecting only bin 3. And voila, here's your MMN!</p>
+
+
+      <h2 id="faq">FAQ</h2>
+      <p><em><b>How to choose location of your references?</b></em><p>
+        <p>TBC</p>
+      <p><em><b>Which filters do we need to apply and when?</b></em><p>
+        <p>TBC</p>
+      <p><em><b>How do we decide which times to include in epoching?</b></em><p>
+        <p>TBC</p>
+      <p><em><b>Why taking notes during data collection can be helpful during analysis?</b></em><p>
+        <p>Knowing in advance that there is something wonky in your data means that (1) you don’t have to scroll through all your data to identify bad channels, and (2) you don’t have to redo your analyses.</p>
+      <p><em><b>Why all file names are prefixed with 1?</b></em></p>
+        <p>When processing EEG data, you need to process data from multiple participants. Here, we’re looking at the data of only one participant (Subject 1 from the downloaded dataset), so this is what this number represents. This is to know which subject’s data your processing and of course not to overwrite your previously processed subject with new data.</p>
+</br><p class="pubdate-note">First published on: June 26, 2025</p></br>
+    </article>
+
+<!-- ############### CONTENTS ############### -->
+
+    <aside class="toc">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#about">About ERP Core website</a></li>
+        <li><a href="#data">Downloading and viewing data</a></li>
+        <li><a href="#s01">1. Defininig channel locations</a></li>
+        <li><a href="#s02">2. Down-sampling</a></li>
+        <li><a href="#s03">3. Re-referencing</a></li>
+        <li><a href="#s04">4. Defining additional channels</a></li>
+        <li><a href="#s05">5. Filtering: High-pass filter</a></li>
+        <li><a href="#s06">6. Removing eye movements with ICA</a></li>
+        <li><a href="#s07">7. Plotting component activations</a></li>
+        <li><a href="#s08">8. Rejecting selected components</a></li>
+        <li><a href="#s09">9. Epoching</a></li>
+        <li><a href="#s10">10. Removing remaining artefacts</a></li>
+        <li><a href="#s11">11. Filtering: Low-pass filter</a></li>
+        <li><a href="#s12">12. Computing average ERPs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+  </main>
+
+
+</div>
+</div>
+
+<!-- ############### FOOTER ############### -->
+
+<div class="section">
+<div id="credits">
+    <div class="col"><p>Last modified 2025/06/26</p></div>
+    <!-- <div class="col"><p><a href="#">Privacy</a> | <a href="#">Support</a> | <a href="#">Site Map</a></p></div> -->
+
+	<!-- This part has to be kept intact under the CC-NC Licence -->
+    <div class="col"><p><a href="http://mlpdesign.net">HTML & CSS</a> by MLPdesign & MKachlicka</p></div>
+	<!-- CC-NC Licence credit ends here -->
+
+</div>
+</div>
+
+</div>
+
+<!-- ############### JS ELEMENTS ############### -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const categorySelect = document.getElementById('categorySelect');
+    const searchInput = document.getElementById('tutorialSearch');
+    const tutorialCards = document.querySelectorAll('.tutorial-card');
+
+    function filterTutorials() {
+      const selectedCategory = categorySelect.value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase();
+
+      tutorialCards.forEach(card => {
+        const category = card.getAttribute('data-category').toLowerCase();
+        const content = card.textContent.toLowerCase();
+
+        const matchesCategory = selectedCategory === '' || category === selectedCategory;
+        const matchesSearch = content.includes(searchTerm);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    categorySelect.addEventListener('change', filterTutorials);
+    searchInput.addEventListener('input', filterTutorials);
+  });
+</script>
+
+
+
+</body>
+</html>
