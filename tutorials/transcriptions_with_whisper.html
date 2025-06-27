@@ -251,24 +251,24 @@ code {
   <main>
     <article>
 
-      <p>In this tutorial, I will show you how to use the OpenAI Whisper model to transcribe your audio files. Big thanks to Rainy Dong who showed me how to do this! &hearts;</p>
+      <p>In this tutorial, I will show you how to use the OpenAI Whisper model to transcribe your audio files. Big thanks to Rainy Dong for showing me how easy it is to do this! &hearts;</p>
 
       <h2 id="about">About OpenAI Whisper model</h2>
       <p>Whisper is an automatic speech recognition (ASR) model trained on hundreds of hours of multilingual and multitask supervised data collected from the internet. You can find more information about it on the <a href="https://openai.com/index/whisper/">OpenAI Whisper website</a>.</p>
 
 
       <h2 id="s01">Using Google Colab to run your code</h2>
-      <p>To run the code in Google Colab, you simply click on the arrow in the left most corner of the code chunk. Depending on what the code is doing, it might take a few seconds (minutes or hours!) for the code to run. Once executed, the arrow will turn into a number (numbers correspond to the order in which you pressed them), and you will see the time that it took to execute it next to it.</p>
+      <p>To run code in Google Colab, simply click the arrow in the leftmost corner of the code chunk/cell. Depending on what the code does, it may take a few seconds (minutes or hours!) for the code to run. Once executed, the arrow will turn into a number (numbers correspond to the order in which you ran the cells), and you'll see the exectition time displayed next to it.</p>
 
       <p>Things to remember when using Colab:</p>
       <ul>
-        <li>Please do not run multiple chunks at the same time, because things get stuck.</li>
-        <li>Most code chunks have some outputs, always check that these are as expected.</li>
+        <li>Please do not run multiple chunks at the same time, because things will get stuck.</li>
+        <li>Most code chunks will produce some output, always check that the output is what you expect.</li>
         <li>Warnings are usually fine, but please read them to make sure you're not missing anything (e.g., deprecated functions).</li>
       </ul>
 
       <h3 id="s02">Mounting Google Drive</h3>
-      <p>To analyze files from your Google Drive, you have to let the script know where your data is located. Execute the chunk below. A pop-up window will open; follow the instructions there to grant Colab access to your files in Google Drive.</p>
+      <p>To analyze files from your Google Drive, you have to let the script know where your data is located. Execute the chunk below. A pop-up window will open; follow the instructions to grant Colab access to your files in Google Drive.</p>
 
       <div class="code-block">
         <button class="copy-button">Copy</button>
@@ -280,7 +280,7 @@ drive.mount('/content/drive') # say where your drive is
 
 
       <h3 id="s03">Reading audio files</h3>
-      <p>Once you've done that, indicate which folder on Google Drive contains the WAV files you wish to transcribe. You can name your folder however you like, but please do not use spaces.</p>
+      <p>Once you've done that, indicate which folder on Google Drive contains the audio files you wish to transcribe. You can name your folder however you like, but please do not use spaces.</p>
 
       <div class="code-block">
         <button class="copy-button">Copy</button>
@@ -291,11 +291,11 @@ wav_folder = "/content/drive/MyDrive/speechcues/data/"
 os.chdir(wav_folder)
 </code></pre></div>
 
-      <p>Now, let's check if your files are read correctly. Execute the chunk below. In the output, you should see a list of files that are currently in your data folder you indicated above.</p>
+      <p>Now, let's check if your files are being read correctly. Execute the chunk below. The output should show a list of the files that are currently in the folder you specified above.</p>
       <ul>
         <li>You can change the format of your files from mp3 to wav if needed</li>
-        <li>If you add new files to a previously mounted drive, you might need to re-read the files</li>
-        <li>If you add new files in new folder location you need to re-mount the drive, otherwise the script won't see it</li>
+        <li>If you add new files to an already mounted drive, you might need to re-read the folder</li>
+        <li>If you add files in a new folder, you need to re-mount the drive; otherwise the script won't see it</li>
       </ul>
 
       <div class="code-block">
@@ -315,7 +315,7 @@ len(wav_files)
 
       <h3 id="s05">Loading the model</h3>
 
-      <p>Run the code below to import the models into your Colab workspace. This will produce a lot of output - this is good. Most messages should be saying something like installing, collecting, or successully installed/uninstalled. This might take a few good seconds/minutes to finish because the models are huge.</p>
+      <p>Run the following code to import the model into your Colab workspace. It will produce a lot of output - that's normal. Most messages will say things like installing, collecting, or successully installed/uninstalled. This might take some time to finish because the models are huge.</p>
 
       <div class="code-block">
         <button class="copy-button">Copy</button>
@@ -335,11 +335,11 @@ len(wav_files)
 </code></pre></div>
 
       <h3 id="s06">Running the model</h3>
-      <p>The code below uses the OpenAI model to generate trascriptions with the default settings for large English model and returns transcriptions in .txt format. This will take a long time to run (especially if you are not connected to Collab runtime - which I don't recommend doing unless you have a really powerful machine), so please be patient and do not close your browser.</p>
+      <p>The code below uses the OpenAI model to generate trascriptions with the default settings for large English model and rsaves them as .txt files. This can take a long time to run (especially if you are not connected to Collab runtime - which I don't recommend doing unless you have a really powerful machine), so please be patient and do not close your browser.</p>
 
       <ul>
-        <li>If you are running this using your CPU, it will take forever (depending on your equipment, even several hours!)</li>
-        <li>If you are running this using Collab GPU, it will be 100 times faster and also, it doesn't drain your computer's resources so you can do other things in the meantime</li>
+        <li>If you're running this using your CPU, it will take forever (depending on your equipment, even several hours!)</li>
+        <li>If you're running this using Collab GPU, it will be 100 times faster and also, it won't drain your computer's resources so you can do other things in the meantime</li>
       </ul>
 
       <div class="code-block">
