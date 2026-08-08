@@ -178,6 +178,159 @@ ul#topnav li > ul > li {
 #show-menu  {display:none;}
 .open, .close { background-color:inherit; color:#fff; text-align:right; font-weight:normal; font-size:1.5em; padding: 0; position:absolute; top:10%; right:5%; display:none; }
 
+/* Compact CV-style entries (role/name left, dates right) - used on Teaching page */
+.cv-entry {
+    padding-top: 6px;
+    margin-bottom: 8px;
+}
+
+.cv-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px 16px;
+    text-align: left;
+}
+
+.cv-row .cv-title {
+    margin: 0;
+    font-size: 105%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cv-row .cv-title.cv-title-plain {
+    font-weight: normal;
+}
+
+.cv-row .cv-name {
+    margin: 0;
+    font-size: 105%;
+    font-weight: normal;
+    text-align: left;
+}
+
+.cv-row .cv-dates {
+    color: #999;
+    font-size: 90%;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.cv-entry ul {
+    margin: 3px 0 0 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.cv-entry ul li {
+    margin-bottom: 2px;
+    text-align: left;
+    font-size: 100%;
+    line-height: 150%;
+}
+
+ul.cv-list-compact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.cv-list-compact li.cv-row {
+    margin-bottom: 6px;
+}
+
+/* News page: tag badges, sidebar filters, feed layout */
+.news-tag {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    color: #777;
+    border: 1px solid #777;
+    border-radius: 3px;
+    margin-bottom: 6px;
+}
+
+.news-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.news-sidebar {
+    flex: 0 0 160px;
+    position: sticky;
+    top: 60px;
+    order: 2;
+}
+
+.news-sidebar h3 {
+    font-size: 100%;
+    color: #444;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.news-filter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-filter-list li {
+    margin-bottom: 6px;
+}
+
+.news-filter {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: 1px solid #777;
+    color: #555;
+    font-family: inherit;
+    font-size: 90%;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.news-filter:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.news-filter.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.news-feed {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 1;
+}
+
+.news-entry {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.news-entry:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.news-entry.news-hidden {
+    display: none;
+}
+
 
 /* start make items responsive */
 @media screen and (max-width : 1024px){
@@ -218,6 +371,25 @@ ul#topnav li> ul > li {padding-left:10px; }
 
 .col { float:left; margin:auto; width:100%; margin-bottom:10%;}
 #credits p { text-align:center; margin-bottom:-10%;}
+
+.news-layout {
+    flex-direction: column;
+}
+.news-sidebar {
+    position: static;
+    width: 100%;
+}
+.news-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.news-filter-list li {
+    margin-bottom: 0;
+}
+.news-filter {
+    width: auto;
+}
 
 }
 /* end make items responsive */
